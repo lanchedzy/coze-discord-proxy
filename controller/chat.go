@@ -478,6 +478,9 @@ func ImagesForOpenAI(c *gin.Context) {
 		return
 	}
 
+	// 创建图片时追加Prompt，解决discord中无法正确识别用户绘图意图
+	request.Prompt = common.IMAGE_PROMPT_PREFIX + request.Prompt
+
 	if runeCount := len([]rune(request.Prompt)); runeCount > 2000 {
 		c.JSON(http.StatusOK, gin.H{
 			"success": false,

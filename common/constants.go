@@ -13,6 +13,7 @@ var RequestOutTime = os.Getenv("REQUEST_OUT_TIME")
 var StreamRequestOutTime = os.Getenv("STREAM_REQUEST_OUT_TIME")
 var SwaggerEnable = os.Getenv("SWAGGER_ENABLE")
 var OnlyOpenaiApi = os.Getenv("ONLY_OPENAI_API")
+var IMAGE_PROMPT_PREFIX = os.Getenv("IMAGE_PROMPT_PREFIX")
 
 var DebugEnabled = os.Getenv("DEBUG") == "true"
 
